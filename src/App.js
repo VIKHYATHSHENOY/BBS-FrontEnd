@@ -1,26 +1,9 @@
 // App.js
+import React from 'react';
 import ImageSlider from "./ImageSlider";
 import Navbar from './Navbar';
 import Footer from './Footer';
-
-
-const Box = () => {
-  return (
-    <div
-      style={{
-        width: '30%',
-        height: '200px',
-        backgroundColor: '#f0f0f0', // Set the background color
-        borderRadius: '15px', // Set the border radius for curved corners
-        margin: '20px', // Adjust spacing between boxes
-        display: 'inline-block',
-        boxSizing: 'border-box',
-      }}
-    >
-      {/* Box content goes here */}
-    </div>
-  );
-};
+import Box from './Box';
 
 const App = () => {
   const slides = [
@@ -34,12 +17,28 @@ const App = () => {
   const containerStyles = {
     maxWidth: "1380px",
     margin: "0 auto",
-    marginBottom: "100px"
+    position: 'relative',
   };
-  // Increase marginTop value to move the boxes above
+
+  // Adjust the marginTop and marginBottom values to create space
   const boxContainerStyles = {
     textAlign: 'center',
-    marginTop: '50px', // Adjust the marginTop value
+    marginTop: '-150px', // Adjust this value
+    marginBottom: '20px', // Reduced marginBottom
+  };
+
+  const headingStyles = {
+    fontWeight: 'bold',
+  };
+
+  const footerStyles = {
+    borderTop: '2px solid black',
+    padding: '20px',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    width: '100%',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
   };
 
   return (
@@ -50,11 +49,12 @@ const App = () => {
       </div>
       {/* Three rectangular boxes */}
       <div style={boxContainerStyles}>
-        <Box />
-        <Box />
-        <Box />
+        <h1 style={headingStyles}>What makes us unique</h1>
+        <Box text="Box 1 Text - Something unique about Box 1." />
+        <Box text="Box 2 Text - Something unique about Box 2." />
+        <Box text="Box 3 Text - Something unique about Box 3." />
       </div>
-      <Footer />
+      <Footer style={footerStyles} />
     </div>
   );
 };

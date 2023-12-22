@@ -1,11 +1,10 @@
-// Navbar.js
 import React from 'react';
 
 const Navbar = () => {
   return (
     <div>
       <hr style={{ borderTop: '2px solid black', borderBottom: '2px solid black', margin: '0' }} />
-      <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ borderTop: '2px solid black', borderBottom: '2px solid black' }}>
+      <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary" style={{ borderTop: '2px solid black', borderBottom: '2px solid black' }}>
         <div className="container-fluid">
           <a className="navbar-brand fw-bold" href="#">
             BAR BENDING SCHEDULE
@@ -43,7 +42,7 @@ const Navbar = () => {
                   Contact
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item ms-lg-auto">
                 <a className="btn btn-dark" href="#" style={{ backgroundColor: 'black', color: 'white' }}>
                   Login
                 </a>
